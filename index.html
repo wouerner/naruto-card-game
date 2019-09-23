@@ -1,11 +1,12 @@
 <html>
   <head>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
     <div id="app">
-      <table>
+      <table class="table is-bordered">
         <tr>
           <td>
             {{player1.nome}}
@@ -20,7 +21,7 @@
           </td>
         </tr>
       </table>
-      <table>
+      <table  :class="classString">
         <tr>
           <td>
             {{player2.nome}}
@@ -49,7 +50,8 @@
             nome: 'Joana',
             vida: 10,
             cartas: ['rock lee', 'sakura']
-          }
+          },
+          classString: 'table is-hoverable'
         }
       })
     </script>
